@@ -17,6 +17,17 @@ CREATE TABLE enrollments (
     course_id  INT REFERENCES courses(course_id)
 );
 
+INSERT INTO students (first_name, last_name, email) VALUES
+('Ada', 'Yilmaz', 'ada@example.com'),
+('Ben', 'Kaya', 'ben@example.com');
+
+INSERT INTO courses (title, credits) VALUES
+('Databases', 5),
+('Software Engineering', 6);
+
+INSERT INTO enrollments (student_id, course_id) VALUES (1, 1), (1, 2), (2, 1);
+
+
 SELECT * FROM students;
 
 SELECT s.first_name, c.title
